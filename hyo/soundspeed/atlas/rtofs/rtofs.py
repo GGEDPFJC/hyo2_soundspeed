@@ -341,9 +341,9 @@ class Rtofs(AbstractAtlas):
     def _build_check_urls(input_date):
         """make up the url to use for salinity and temperature"""
         # Primary server: http://nomads.ncep.noaa.gov/pub/data/nccf/com/rtofs/prod/rtofs.20160410/
-        url_temp = 'http://nomads.ncep.noaa.gov/pub/data/nccf/com/rtofs/prod/rtofs.%s/rtofs_glo_3dz_n024_daily_3ztio.nc' \
+        url_temp = 'https://nomads.ncep.noaa.gov/pub/data/nccf/com/rtofs/prod/rtofs.%s/rtofs_glo_3dz_n024_daily_3ztio.nc' \
                    % input_date.strftime("%Y%m%d")
-        url_sal = 'http://nomads.ncep.noaa.gov/pub/data/nccf/com/rtofs/prod/rtofs.%s/rtofs_glo_3dz_n024_daily_3zsio.nc' \
+        url_sal = 'https://nomads.ncep.noaa.gov/pub/data/nccf/com/rtofs/prod/rtofs.%s/rtofs_glo_3dz_n024_daily_3zsio.nc' \
                   % input_date.strftime("%Y%m%d")
         return url_temp, url_sal
 
@@ -351,9 +351,9 @@ class Rtofs(AbstractAtlas):
     def _build_opendap_urls(input_date):
         """make up the url to use for salinity and temperature"""
         # Primary server: http://nomads.ncep.noaa.gov:9090/dods/rtofs
-        url_temp = 'http://nomads.ncep.noaa.gov:9090/dods/rtofs/rtofs_global%s/rtofs_glo_3dz_nowcast_daily_temp' \
+        url_temp = 'https://nomads.ncep.noaa.gov:9090/dods/rtofs/rtofs_global%s/rtofs_glo_3dz_nowcast_daily_temp' \
                    % input_date.strftime("%Y%m%d")
-        url_sal = 'http://nomads.ncep.noaa.gov:9090/dods/rtofs/rtofs_global%s/rtofs_glo_3dz_nowcast_daily_salt' \
+        url_sal = 'https://nomads.ncep.noaa.gov:9090/dods/rtofs/rtofs_global%s/rtofs_glo_3dz_nowcast_daily_salt' \
                   % input_date.strftime("%Y%m%d")
         return url_temp, url_sal
 
