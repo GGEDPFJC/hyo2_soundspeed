@@ -69,7 +69,7 @@ class OceanScience(AbstractTextReader):
         if (lat_meta is None) or (lon_meta is None):
             lat_meta = re.search(r'/*\*Lat (?P<lat>[\d.-]+)', s)
             lon_meta = re.search(r'/*\*Lon (?P<lon>[\d.-]+)', s)
-            logger.debug("lat: %s" % lat_meta.group('lat'))
+            # logger.debug("lat: %s" % lat_meta.group('lat'))
 
         try:
             location = coordinates.Coordinate(lat_meta.group('lat'), lon_meta.group('lon'))
